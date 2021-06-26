@@ -1,5 +1,8 @@
 Attribute VB_Name = "MMatrices"
 Option Explicit
+'2021-06-26 lines: 1218
+'in VBC we are forced to use letters for the names of the variables of the elements in a vector or a matrix
+'because otherwise we will run out of line space in some functions
 Public Type Vector2
     a As Double
     b As Double
@@ -158,7 +161,7 @@ Public Function Vec6(a As Double, b As Double, c As Double, d As Double, e As Do
     With Vec6: .a = a: .b = b: .c = c: .d = d: .e = e: .f = f: End With
 End Function
 
-'Alle Daten im Vektor löschen, Vektoren zu Null setzen
+'Alle Daten im Vektor löschen, bzw Variablen zu Null setzen
 Public Function Vec2_Clear() As Vector2
     Dim v As Vector2: Vec2_Clear = v
 End Function
@@ -363,7 +366,7 @@ Public Function Mat6_E() As Matrix6
     With Mat6_E: .aa = 1: .bb = 1: .cc = 1: .dd = 1: .ee = 1: .ff = 1:    End With
 End Function
 
-'Alle Daten im Vektor löschen, Vektoren zu Null setzen
+'Alle Daten in der Matrix löschen, bzw Variablen zu Null setzen
 Public Function Mat2_Clear() As Matrix2
     Dim m As Matrix2: Mat2_Clear = m
 End Function
